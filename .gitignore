@@ -1,0 +1,11 @@
+node_modules/
+tmp/
+*.zip
+*.pdf
+*.docx
+*.cpuprofile
+benchmark-*.json
+comparison-summary.json
+flamegraph-*.html
+REPORT.md
+

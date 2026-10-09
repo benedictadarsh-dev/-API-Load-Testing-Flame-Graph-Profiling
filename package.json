@@ -1,0 +1,19 @@
+{
+  "name": "internal-1-project-27-api-profiling",
+  "version": "1.0.0",
+  "description": "API Load Testing, V8 CPU Flame Graph Profiling, and Hot Path Optimization Lab",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "profile:before": "node --cpu-prof --cpu-prof-name=profile-before.cpuprofile server.js",
+    "profile:after": "node --cpu-prof --cpu-prof-name=profile-after.cpuprofile server.js",
+    "benchmark:before": "node scripts/run-benchmark.js --target=before",
+    "benchmark:after": "node scripts/run-benchmark.js --target=after",
+    "generate-flamegraphs": "node scripts/generate-flamegraph.js",
+    "full-experiment": "node scripts/run-full-experiment.js"
+  },
+  "dependencies": {
+    "autocannon": "^8.0.0",
+    "express": "^4.21.2"
+  }
+}
